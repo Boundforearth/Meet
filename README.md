@@ -8,17 +8,17 @@ This project is going to be a serverless progressive web application built with 
 3) Specify number of events.
 4) Use the app when offline.
 5) Add an app shortcut to the home screen.
-6^ View a chart showing the number of upcoming events by city.
+6) View a chart showing the number of upcoming events by city.
 
 
 ## User Stories & Secnarios
 
-1)	Show/Hide an Event’s Details - As a user, I should be able to expand or collapse data about events so that I can easily get more info on only the events I am interested in.
+1.	Show/Hide an Event’s Details - As a user, I should be able to expand or collapse data about events so that I can easily get more info on only the events I am interested in.
 
-  a)	Scenario 1: An event element is collapsed by default
-    i)	Given: The main page is loaded
-    ii)	When: The user is looking through events
-    iii)	Then: The  event’s details will be collapsed
+  a.	Scenario 1: An event element is collapsed by default
+    i.	Given: The main page is loaded
+    ii.	When: The user is looking through events
+    iii.	Then: The  event’s details will be collapsed
 
   b)	Scenario 2: User can expand an event to see its details
     i)	Given: The user is looking through the events
