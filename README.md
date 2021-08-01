@@ -15,54 +15,54 @@ This project is going to be a serverless progressive web application built with 
 
 1.	Show/Hide an Event’s Details - As a user, I should be able to expand or collapse data about events so that I can easily get more info on only the events I am interested in.
 
-  a.	Scenario 1: An event element is collapsed by default
-    i.	Given: The main page is loaded
-    ii.	When: The user is looking through events
-    iii.	Then: The  event’s details will be collapsed
+    -	Scenario 1: An event element is collapsed by default
+      -	Given: The main page is loaded
+      -	When: The user is looking through events
+      -	Then: The  event’s details will be collapsed
 
-  b)	Scenario 2: User can expand an event to see its details
-    i)	Given: The user is looking through the events
-    ii)	When: The user clicks a “show details” button
-    iii)	Then: Details for the event are expanded
+    -	Scenario 2: User can expand an event to see its details
+      -	Given: The user is looking through the events
+      -	When: The user clicks a “show details” button
+      -	Then: Details for the event are expanded
 
-  c)	Scenario 3: User can collapse an event to hide it’s details
-    i)	Given: The user has expanded an event’s details
-    ii)	When: The user clicks a “hide details” button
-    iii)	Then: The Event details will collapse
-
-
-2)	Specify Number of Events – As a user I should be able to choose how many events show up on a given page so that I can enjoy browse better based on my preferences.
-
-  a)	Scenario 1: When a user hasn’t specified a number, 32 is the default number
-    i)	Given: The user is browsing some list of events
-    ii)	When: The user has not specified the number of events to show
-    iii)	Then: The number of events to show will default to 32
-
-  b)	Scenario 2: The user can change the number of events they want to see
-    i)	Given: The user is browsing a list of events
-    ii)	When: The user clicks on a dropdown box and makes a selection
-    iii)	Then: The number of events showing will change to the selected number
+    -	Scenario 3: User can collapse an event to hide it’s details
+      -	Given: The user has expanded an event’s details
+      -	When: The user clicks a “hide details” button
+      -	Then: The Event details will collapse
 
 
-3)	Use the App when Offline -As a user, I should be able to view events when offline so that I can still see info on events I am interested in even if I lose service or am unable to connect to the Internet
+2.	Specify Number of Events – As a user I should be able to choose how many events show up on a given page so that I can enjoy browse better based on my preferences.
 
-  a)	Scenario 1: Show cached data when there’s no internet connection
-    i)	Given: The user has used the app before and has cached data
-    ii)	When: The user is unable to connect to the Internet but tries to view the app anyways
-    iii)	Then: The user will be able to view the cached data
+    -	Scenario 1: When a user hasn’t specified a number, 32 is the default number
+      -	Given: The user is browsing some list of events
+      -	When: The user has not specified the number of events to show
+      -	Then: The number of events to show will default to 32
 
-  b)	Scenario 2: Show an error when the user changes the settings (city, time, range)
-    i)	Given: The user is not connected to the Internet
-    ii)	When: The user tries to change their settings
-    iii)	Then: The user will receive an error
+  -	Scenario 2: The user can change the number of events they want to see
+    -	Given: The user is browsing a list of events
+    -	When: The user clicks on a dropdown box and makes a selection
+    -	Then: The number of events showing will change to the selected number
 
 
-4)	Data Visualization – As a user, I should be able to see the number of events coming in each city so that I know what areas hold more events and can make plans for myself accordingly.
+3.	Use the App when Offline -As a user, I should be able to view events when offline so that I can still see info on events I am interested in even if I lose service or am unable to connect to the Internet
 
-  a)	Scenario 1: Show a chart with the number of upcoming events in each city
-    i)	Given: The user is looking at events for multiple cities
-    ii)	When: They click a “view chart” button
-    iii)	Then: A chart will pop up with the number of events upcoming in each city
+    -	Scenario 1: Show cached data when there’s no internet connection
+      -	Given: The user has used the app before and has cached data
+      -	When: The user is unable to connect to the Internet but tries to view the app anyways
+      -	Then: The user will be able to view the cached data
+
+    -	Scenario 2: Show an error when the user changes the settings (city, time, range)
+      -	Given: The user is not connected to the Internet
+      -	When: The user tries to change their settings
+      -	Then: The user will receive an error
+
+
+4.	Data Visualization – As a user, I should be able to see the number of events coming in each city so that I know what areas hold more events and can make plans for myself accordingly.
+
+    -	Scenario 1: Show a chart with the number of upcoming events in each city
+      -	Given: The user is looking at events for multiple cities
+      -	When: They click a “view chart” button
+      -	Then: A chart will pop up with the number of events upcoming in each city
 
 ## Dependencies
 
