@@ -15,20 +15,20 @@ This project is going to be a serverless progressive web application built with 
 
 1.	Show/Hide an Event’s Details - As a user, I should be able to expand or collapse data about events so that I can easily get more info on only the events I am interested in.
 
-    -	Scenario 1: An event element is collapsed by default
-      -	Given: The main page is loaded
-      -	When: The user is looking through events
-      -	Then: The  event’s details will be collapsed
+  -	Scenario 1: An event element is collapsed by default
+    -	Given: The main page is loaded
+    -	When: The user is looking through events
+    -	Then: The  event’s details will be collapsed
 
-    -	Scenario 2: User can expand an event to see its details
-      -	Given: The user is looking through the events
-      -	When: The user clicks a “show details” button
-      -	Then: Details for the event are expanded
+  -	Scenario 2: User can expand an event to see its details
+    -	Given: The user is looking through the events
+    -	When: The user clicks a “show details” button
+    -	Then: Details for the event are expanded
 
-    -	Scenario 3: User can collapse an event to hide it’s details
-      -	Given: The user has expanded an event’s details
-      -	When: The user clicks a “hide details” button
-      -	Then: The Event details will collapse
+  -	Scenario 3: User can collapse an event to hide it’s details
+    -	Given: The user has expanded an event’s details
+    -	When: The user clicks a “hide details” button
+    -	Then: The Event details will collapse
 
 
 2.	Specify Number of Events – As a user I should be able to choose how many events show up on a given page so that I can enjoy browse better based on my preferences.
