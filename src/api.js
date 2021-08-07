@@ -61,7 +61,7 @@ const removeQuery = () => {
 const getToken = async (code) => {
   const encodeCode = encodeURIComponent(code);
   const { access_token } = await fetch(
-    "https://dycgmo7l10.execute-api.us-east-1.amazonaws.com/dev/api/getevents/" + encodeCode
+    "https://dycgmo7l10.execute-api.us-east-1.amazonaws.com/dev/api/token/{code}" + encodeCode
   )
     .then((res) => {
       return res.json();
@@ -89,7 +89,7 @@ export const getEvents = async () => {
     const result = await axios.get(url);
     if(result.data) {
       var locations = extractLocations(result.data.events);
-      localStorage.setItem("lestEvents", JSON.stringify(result.data));
+      localStorage.setItem("lastEvents", JSON.stringify(result.data));
       localStorage.setItem("locations", JSON.stringify(locations));
     }
     NProgress.done();
