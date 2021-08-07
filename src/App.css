@@ -34,28 +34,19 @@ input[type="number"] {
   line-height: 20px;
   align-self: center;
   height: 38px;
+  margin-top: 1rem;
 }
 
 .city {
   width: 250px;
 }
 
-.CitySearch {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 300px;
-  max-width: 300px;
-  margin: auto;
-  position: relative;
-}
-
 .suggestions {
   width: 250px;
-  position: absolute;
+  position: relative;
+  margin-top: 0;
   z-index: 2;
   align-self: center;
-  margin: 0;
-  top: 43px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -76,56 +67,37 @@ input[type="number"] {
   background-color: #bcdcdb;
 }
 
-.event {
-  padding: 10px 10px 35px;
-  margin-bottom: 10px;
-  text-align: left;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  position: relative;
+.CitySearch {
+  display: flex;
+  flex-direction: column;
 }
 
-.description-btn {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  padding: 5px 8px;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
+.input-boxes {
+  display: flex;
+  flex: 1 0 20rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.name {
-  font-size: 18px;
-  font-weight: 600;
+.NumberOfEvents {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4rem;
+  border-radius: 1rem;
 }
 
-.group-name {
-  text-transform: uppercase;
-  font-size: 14px;
+.EventList {
+  display: flex;
+  flex-direction: column;
 }
 
-.going,
-.visibility {
-  font-style: italic;
-}
-
-.description {
-  overflow-x: hidden;
-}
-
-.numberOfEvents {
-  width: 200px;
-  margin: 20px auto;
-  text-align: center;
-}
-
-.button-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  padding: 20px;
-  font-family: sans-serif;
+.Event {
+  text-align: initial;
+  border: #000 solid .05rem;
+  margin:  1rem 2rem;
+  padding: 0 1rem 1rem 1rem;
+  border-radius: .5rem;
 }
 
 .Alert {

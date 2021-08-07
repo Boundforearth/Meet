@@ -10,6 +10,8 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
+    displayCount: 32,
+    currentCity: "all",
   }
 
   componentDidMount() {
@@ -17,33 +19,48 @@ class App extends Component {
     getEvents().then((events) => {
       if(this.mounted){
         this.setState({
-          events, 
-          locations: extractLocations(events)
+          events,
+          locations: extractLocations(events),
         });
       }
     });
+  }
+
+  updateEvents = (location, displayCount) => {
+    this.mounted = true;
+    getEvents().then((events) => {
+      if(this.mounted) {
+        const locationEvents = (location === "all") ?
+          events :
+          events.filter((event) => event.location === location);
+        let filteredEvents = locationEvents.slice(0, displayCount)
+        this.setState({
+          events: filteredEvents,
+          currentCity: location,
+        });
+      }
+    });
+  }
+
+  getDisplayCount = (value) => {
+    const location = this.state.currentCity;
+    this.setState({
+      displayCount: value
+    })
+    this.updateEvents(location, value);
   }
 
   componentWillUnmount() {
     this.mounted = false;
   }
 
-  updateEvents = (location) => {
-    getEvents().then((events) => {
-      const locationEvents = (location === "all") ?
-        events :
-        events.filter((event) => event.location === location);
-      this.setState({
-        events: locationEvents
-      });
-    });
-  }
-
   render() {
     return (
       <div className="App">
-        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents />
+        <div className="input-boxes">
+          <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+          <NumberOfEvents getDisplayCount={this.getDisplayCount}/>
+        </div>
         <EventList events={this.state.events} />
       </div>
     );

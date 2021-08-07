@@ -16,13 +16,8 @@ describe("<Event /> component", () => {
   });
 
 
-  test("render the date", () => {
-    expect(EventWrapper.find(".start-time").text()).toBe(mockData[0].start.dateTime);
-  });
-
-
-  test("render the timezone", () => {
-    expect(EventWrapper.find(".time-zone").text()).toBe(mockData[0].start.timeZone);
+  test("render the date and timezone", () => {
+    expect(EventWrapper.find(".start-time").text()).toBe(mockData[0].start.dateTime + " " + mockData[0].start.timeZone);
   });
 
 

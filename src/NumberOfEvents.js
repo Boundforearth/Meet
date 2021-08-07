@@ -11,11 +11,14 @@ class NumberOfEvents extends Component {
     this.setState({
       displayCount: value
     })
+    this.props.getDisplayCount(event.target.value);
   }
 
   render() {
+
     return(
-      <div>
+      <div className="NumberOfEvents">
+        <label>Event Count: </label>
         <input 
           type="number"
           className="number"

@@ -32,12 +32,15 @@ class CitySearch extends Component {
   render() {
     return (
       <div className="CitySearch">
+        <label>Location: </label>
         <input
           type="text"
           className="city"
           value={this.state.query}
           onChange={this.handleInputChanged}
+          placeholder="Enter a city..."
           onFocus={() => { this.setState({ showSuggestions: true }) }}
+          onBlur={() => setTimeout(() => {this.setState({showSuggestions: undefined })}, 250 )}
         />
         <ul className="suggestions" style={this.state.showSuggestions ? {}: {display: "none"}}>
           {this.state.suggestions.map((suggestion) => (

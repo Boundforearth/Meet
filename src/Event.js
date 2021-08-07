@@ -28,15 +28,13 @@ class Event extends Component {
     const buttonText = toggleDetails ? "Hide Details" : "Show Details";
     return (
       <div className="Event">
-        <h4 className="summary">{event.summary}</h4>
-        <p className="start-time">{event.start.dateTime}</p>
-        <span className="time-zone">{event.start.timeZone}</span>
+        <h2 className="summary">{event.summary}</h2>
+        <p className="start-time time-zone">{event.start.dateTime} {event.start.timeZone}</p>
         <p className="location">@{event.summary} | {event.location}</p>
         <div 
           className={details}
         >
-          <h5>About Event:</h5>
-          <h6>See Details on Google Calendar</h6>
+          <h4>About Event:</h4>
           <p className="description">{event.description}</p>
         </div>
         <button 

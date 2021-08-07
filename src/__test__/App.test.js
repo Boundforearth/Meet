@@ -61,7 +61,41 @@ describe("<App /> integration", () => {
     const suggestionItems = AppWrapper.find(CitySearch).find('.suggestions li');
     await suggestionItems.at(suggestionItems.length - 1).simulate('click');
     const allEvents = await getEvents();
-    expect(AppWrapper.state('events')).toEqual(allEvents);
+    expect(AppWrapper.state("events")).toEqual(allEvents);
     AppWrapper.unmount();
   });
+
+  test("displayCount updates when user inputs text", () => {
+    const AppWrapper = mount(<App />);
+    AppWrapper.setState({
+      displayCount: 24
+    })
+    AppWrapper.find(NumberOfEvents).find(".number").simulate("change", {target: {value: 16}})
+    expect(AppWrapper.state("displayCount")).toBe(16);
+    AppWrapper.unmount();
+  });
+
+  test("number of events updates to reflect the displayCount", async() => {
+    const AppWrapper = mount(<App />);
+    const allEvents = await getEvents();
+    AppWrapper.setState({events: allEvents});
+    await AppWrapper.find(NumberOfEvents).find(".number").simulate("change", {target: {value: 1}});
+    expect(AppWrapper.state("events")).toHaveLength(1);
+    AppWrapper.unmount()
+  })
+
+  test("Sets the current city state to be the selected city", async () => {
+    const AppWrapper = mount(<App />);
+    const CitySearchWrapper = AppWrapper.find(CitySearch);
+    const locations = extractLocations(mockData);
+    CitySearchWrapper.setState({
+      suggestions: locations
+    });
+    const suggestions = CitySearchWrapper.state("suggestions");
+    const selectedIndex = Math.floor(Math.random() * (suggestions.length));
+    const selectedCity = suggestions[selectedIndex];
+    await CitySearchWrapper.instance().handleItemClicked(selectedCity);
+    expect(AppWrapper.state("currentCity")).toEqual(selectedCity);
+    AppWrapper.unmount()
+  })
 });
