@@ -82,7 +82,7 @@ describe("<App /> integration", () => {
     await AppWrapper.find(NumberOfEvents).find(".number").simulate("change", {target: {value: 1}});
     expect(AppWrapper.state("events")).toHaveLength(1);
     AppWrapper.unmount()
-  })
+  });
 
   test("Sets the current city state to be the selected city", async () => {
     const AppWrapper = mount(<App />);
@@ -97,5 +97,13 @@ describe("<App /> integration", () => {
     await CitySearchWrapper.instance().handleItemClicked(selectedCity);
     expect(AppWrapper.state("currentCity")).toEqual(selectedCity);
     AppWrapper.unmount()
+  });
+
+  test("Pass displayCount as a prop to CitySearch", () => {
+    const AppWrapper = mount(<App />);
+    const AppDisplayState = AppWrapper.state("displayCount");
+    expect(AppDisplayState).not.toEqual(undefined);
+    expect(AppWrapper.find(CitySearch).props().displayCount).toEqual(AppDisplayState);
+    AppWrapper.unmount();
   })
 });

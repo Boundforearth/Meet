@@ -18,8 +18,9 @@ class App extends Component {
     this.mounted = true;
     getEvents().then((events) => {
       if(this.mounted){
+        let filteredEvents = events.slice(0, this.state.displayCount);
         this.setState({
-          events,
+          events: filteredEvents,
           locations: extractLocations(events),
         });
       }
@@ -58,7 +59,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="input-boxes">
-          <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+          <CitySearch 
+            locations={this.state.locations}  
+            updateEvents={this.updateEvents} 
+            displayCount={this.state.displayCount}
+          />
           <NumberOfEvents getDisplayCount={this.getDisplayCount}/>
         </div>
         <EventList events={this.state.events} />
