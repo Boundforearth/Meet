@@ -42,20 +42,22 @@ class CitySearch extends Component {
           onFocus={() => { this.setState({ showSuggestions: true }) }}
           onBlur={() => setTimeout(() => {this.setState({showSuggestions: undefined })}, 250 )}
         />
-        <ul className="suggestions" style={this.state.showSuggestions ? {}: {display: "none"}}>
-          {this.state.suggestions.map((suggestion) => (
-            <li
-              key={suggestion}
-              onClick={() => this.handleItemClicked(suggestion)}
-            >{suggestion}</li>
-          ))}
-          <li 
-            key="all"
-            onClick={() => this.handleItemClicked("all")}
-            >
-            <b>See all cities</b>
-          </li>
-        </ul>
+        <div className="suggestions-container">
+          <ul className="suggestions" style={this.state.showSuggestions ? {}: {display: "none"}}>
+            {this.state.suggestions.map((suggestion) => (
+              <li
+                key={suggestion}
+                onClick={() => this.handleItemClicked(suggestion)}
+              >{suggestion}</li>
+            ))}
+            <li 
+              key="all"
+              onClick={() => this.handleItemClicked("all")}
+              >
+              <b>See all cities</b>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }
