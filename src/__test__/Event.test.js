@@ -16,8 +16,10 @@ describe("<Event /> component", () => {
   });
 
 
-  test("render the date and timezone", () => {
-    expect(EventWrapper.find(".start-time").text()).toBe(mockData[0].start.dateTime + " " + mockData[0].start.timeZone);
+  test("render the date", () => {
+    const date = new Date(mockData[0].start.dateTime);
+    const formattedDate = date.toUTCString();
+    expect(EventWrapper.find(".start-time").text()).toBe(formattedDate);
   });
 
 
@@ -29,7 +31,6 @@ describe("<Event /> component", () => {
   test("render the show button", () => {
     expect(EventWrapper.find(".btn")).toHaveLength(1);
   });
-
 
   test("hide details by default", () => {
     const detailsState = EventWrapper.state("toggleDetails");

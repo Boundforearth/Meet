@@ -26,10 +26,12 @@ class Event extends Component {
     const {toggleDetails} = this.state
     const details = toggleDetails ? "displayed" : "hidden";
     const buttonText = toggleDetails ? "Hide Details" : "Show Details";
+    const startTime = new Date(event.start.dateTime);
+    const formattedStartTime = startTime.toUTCString();
     return (
       <div className="Event">
         <h2 className="summary">{event.summary}</h2>
-        <p className="start-time time-zone">{event.start.dateTime} {event.start.timeZone}</p>
+        <p className="start-time">{formattedStartTime}</p>
         <p className="location">@{event.summary} | {event.location}</p>
         <div 
           className={details}

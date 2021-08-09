@@ -40,13 +40,13 @@ class CitySearch extends Component {
           onChange={this.handleInputChanged}
           placeholder="Enter a city..."
           onFocus={() => { this.setState({ showSuggestions: true }) }}
-          onBlur={() => setTimeout(() => {this.setState({showSuggestions: undefined })}, 250 )}
         />
         <div className="suggestions-container">
           <ul className="suggestions" style={this.state.showSuggestions ? {}: {display: "none"}}>
             {this.state.suggestions.map((suggestion) => (
               <li
                 key={suggestion}
+                className={suggestion}
                 onClick={() => this.handleItemClicked(suggestion)}
               >{suggestion}</li>
             ))}
