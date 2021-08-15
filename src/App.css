@@ -17,6 +17,10 @@ p {
   margin: 5px 0;
 }
 
+label {
+  display: block;
+}
+
 .display-none {
   display: none;
 }
@@ -35,6 +39,10 @@ input[type="number"] {
   align-self: center;
   height: 38px;
   margin-top: 1rem;
+}
+
+.Alert {
+  height: 2rem;
 }
 
 .city {
@@ -72,8 +80,7 @@ input[type="number"] {
 }
 
 .CitySearch {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 .input-boxes {
@@ -84,12 +91,6 @@ input[type="number"] {
   justify-content: space-around;
 }
 
-.NumberOfEvents {
-  display: flex;
-  flex-direction: column;
-  padding-left: 4rem;
-  border-radius: 1rem;
-}
 
 .EventList {
   display: flex;
@@ -102,11 +103,6 @@ input[type="number"] {
   margin:  1rem 2rem;
   padding: 0 1rem 1rem 1rem;
   border-radius: .5rem;
-}
-
-.Alert {
-  position: fixed;
-  top: 20px;
 }
 
 .data-vis-wrapper {

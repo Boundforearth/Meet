@@ -58,6 +58,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h2 className="app-name">Meet App</h2>
         <div className="input-boxes">
           <CitySearch 
             locations={this.state.locations}  
