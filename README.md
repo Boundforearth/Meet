@@ -1,6 +1,6 @@
 # Meet App
 
-This project is going to be a serverless progressive web application built with React using the Google Calendar API to fetch events.  The app will be built with a Test-Driven Development approach.
+This project is a serverless progressive web application built with React using the Google Calendar API to fetch events.  The app was built with a Test-Driven Development approach which included using Jest for unit amd integrated tests, Cucumber for Behavior Driven test, Puppeteer for end-to-end tests.
 
 ## Dependencies
 
