@@ -2,6 +2,33 @@
 
 This project is going to be a serverless progressive web application built with React using the Google Calendar API to fetch events.  The app will be built with a Test-Driven Development approach.
 
+## Dependencies
+
+  - "@testing-library/jest-dom": "^5.14.1",
+  - "@testing-library/react": "^11.2.7",
+  - "@testing-library/user-event": "^12.8.3",
+  - "react": "^17.0.2",
+  - "react-dom": "^17.0.2",
+  - "react-scripts": "4.0.3",
+  - "web-vitals": "^0.2.4",
+  - "workbox-background-sync": "^5.1.4",
+  - "workbox-broadcast-update": "^5.1.4",
+  - "workbox-cacheable-response": "^5.1.4",
+  - "workbox-core": "^5.1.4",
+  - "workbox-expiration": "^5.1.4",
+  - "workbox-google-analytics": "^5.1.4",
+  - "workbox-navigation-preload": "^5.1.4",
+  - "workbox-precaching": "^5.1.4",
+  - "workbox-range-requests": "^5.1.4",
+  - "workbox-routing": "^5.1.4",
+  - "workbox-strategies": "^5.1.4",
+  - "workbox-streams": "^5.1.4"
+
+## Dev-Dependencies
+
+  - "gh-pages": "^3.2.3"
+  - "esLint"
+
 ## Key Features
 1) Filter events by city.
 2) Show/hide event details.
@@ -64,29 +91,3 @@ This project is going to be a serverless progressive web application built with 
     -	When: They click a “view chart” button
     -	Then: A chart will pop up with the number of events upcoming in each city
 
-## Dependencies
-
-  - "@testing-library/jest-dom": "^5.14.1",
-  - "@testing-library/react": "^11.2.7",
-  - "@testing-library/user-event": "^12.8.3",
-  - "react": "^17.0.2",
-  - "react-dom": "^17.0.2",
-  - "react-scripts": "4.0.3",
-  - "web-vitals": "^0.2.4",
-  - "workbox-background-sync": "^5.1.4",
-  - "workbox-broadcast-update": "^5.1.4",
-  - "workbox-cacheable-response": "^5.1.4",
-  - "workbox-core": "^5.1.4",
-  - "workbox-expiration": "^5.1.4",
-  - "workbox-google-analytics": "^5.1.4",
-  - "workbox-navigation-preload": "^5.1.4",
-  - "workbox-precaching": "^5.1.4",
-  - "workbox-range-requests": "^5.1.4",
-  - "workbox-routing": "^5.1.4",
-  - "workbox-strategies": "^5.1.4",
-  - "workbox-streams": "^5.1.4"
-
-## Dev-Dependencies
-
-  - "gh-pages": "^3.2.3"
-  - "esLint"
